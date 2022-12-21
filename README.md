@@ -29,7 +29,7 @@ import SHG from "@jgtools/shg";
 
 ```html
 <script type="module">
-    import SHG from "https://cdn.jsdelivr.net/npm/@jgtools/shg@1.0.2/dist/index.min.js";
+    import SHG from "https://cdn.jsdelivr.net/npm/@jgtools/shg@1.0.3/dist/index.min.js";
     // ...
 </script>
 ```
@@ -54,7 +54,7 @@ shg.update("1", 40, 30); // update item '1' position
 console.log(shg.query(40, 30, 10));
 shg.delete("1"); // delete item '1'
 console.log(shg.query(40, 30, 10));
-shg.clear(); // remove all items from grid
+shg.clear(); // delete all items from grid
 console.log(shg.query(40, 30, 10));
 ```
 
