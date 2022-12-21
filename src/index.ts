@@ -37,6 +37,11 @@ export default class SHG<ID> {
         this.#cells.get(hash)?.delete(id);
         this.#hashes.delete(id);
     }
+    clear() {
+        for (const [k, _v] of this.#hashes) {
+            this.delete(k);
+        }
+    }
     update(id: ID, x: number, y: number) {
         const ph = this.#hashes.get(id);
         if (ph === undefined)
