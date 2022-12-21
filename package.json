@@ -1,0 +1,29 @@
+{
+  "name": "@jgtools/shg",
+  "version": "1.0.0",
+  "description": "Spatial Hash Grid",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGTools/SHG.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "spatial-hash",
+    "spatial-hash-grid"
+  ],
+  "author": "Erik1001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JGTools/SHG/issues"
+  },
+  "homepage": "https://github.com/JGTools/SHG#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
