@@ -1,6 +1,6 @@
 {
   "name": "@jgtools/shg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spatial Hash Grid",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,8 @@
     "javascript",
     "typescript",
     "spatial-hash",
-    "spatial-hash-grid"
+    "spatial-hash-grid",
+    "shg"
   ],
   "author": "Erik1001",
   "license": "MIT",

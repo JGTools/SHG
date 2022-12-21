@@ -37,11 +37,11 @@ import SHG from "SHG";
 ## Usage
 
 ```javascript
-import SHG from "SHG";
+import SHG from "@jgtools/shg";
 
-const cellSize = 10;
 const width = 100;
 const height = 60;
+const cellSize = 10;
 const shg = new SHG(width, height, cellSize);
 
 for (let i = 0; i < 10; i++) {

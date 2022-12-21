@@ -5,6 +5,11 @@ export default class SHG<ID> {
     #cells: Map<number, Set<ID>> = new Map<number, Set<ID>>();
     #hashes: Map<ID, number> = new Map<ID, number>();
     #data = { cs: 1, cx: 1, cy: 1 };
+    /**
+     * @param w width of grid
+     * @param h height of grid
+     * @param cs cellSize
+     */
     constructor(w: number, h: number, cs: number) {
         this.#data.cs = cs;
         this.#data.cx = Math.floor(w / cs) + 1;
@@ -43,14 +48,20 @@ export default class SHG<ID> {
         this.delete(id);
         this.#setInner(id, nh);
     }
-    query(tx: number, ty: number, r: number): ID[] {
-        const [sx, sy] = this.#getCellPos(tx - r, ty - r);
-        const [ex, ey] = this.#getCellPos(tx + r, ty + r);
+    /**
+     * @param x 
+     * @param y 
+     * @param range 
+     * @returns list of ids in range
+     */
+    query(x: number, y: number, range: number): ID[] {
+        const [sx, sy] = this.#getCellPos(x - range, y - range);
+        const [ex, ey] = this.#getCellPos(x + range, y + range);
 
         const ids: ID[] = [];
-        for (let y = sy; y <= ey; y++) {
-            for (let x = sx; x <= ex; x++) {
-                const cell = this.#cells.get(this.#getCellHash(x, y));
+        for (let cy = sy; cy <= ey; cy++) {
+            for (let cx = sx; cx <= ex; cx++) {
+                const cell = this.#cells.get(this.#getCellHash(cx, cy));
                 if (cell)
                     ids.push(...cell);
             }
