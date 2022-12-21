@@ -20,6 +20,11 @@
 npm i @jgtools/shg
 ```
 
+```javascript
+import SHG from "SHG";
+// ...
+```
+
 ### Using cdn
 
 ```html
@@ -32,6 +37,23 @@ npm i @jgtools/shg
 ## Usage
 
 ```javascript
+import SHG from "SHG";
+
+const cellSize = 10;
+const width = 100;
+const height = 60;
+const shg = new SHG(width, height, cellSize);
+
+for (let i = 0; i < 10; i++) {
+  const [x, y] = [Math.random() * width, Math.random() * height];
+  shg.set(i.toString(), x, y);
+}
+
+console.log(shg.query(40, 30, 10));
+shg.update("1", 40, 30); // update item '1' position
+console.log(shg.query(40, 30, 10));
+shg.delete("1"); // delete item '1'
+console.log(shg.query(40, 30, 10));
 ```
 
 ## License
