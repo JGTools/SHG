@@ -1,6 +1,6 @@
 {
   "name": "@jgtools/shg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Spatial Hash Grid",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

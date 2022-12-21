@@ -29,7 +29,7 @@ import SHG from "@jgtools/shg";
 
 ```html
 <script type="module">
-    import SHG from "https://cdn.jsdelivr.net/npm/@jgtools/shg@1.0.3/dist/index.min.js";
+    import SHG from "https://cdn.jsdelivr.net/npm/@jgtools/shg@1.0.4/dist/index.min.js";
     // ...
 </script>
 ```
